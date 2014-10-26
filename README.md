@@ -10,4 +10,4 @@ Limitación Técnica:
 
 Los Vértices deben ser númericos y comenzar desde cero.
 
-#define MAXV 100 // Maxima cantidad de vertices.
+100 // Maxima cantidad de vertices.
