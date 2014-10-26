@@ -11,3 +11,5 @@ Limitación Técnica:
 Los Vértices deben ser númericos y comenzar desde cero.
 
 100 // Maxima cantidad de vertices.
+
+Codigo Fuente Original: http://www.widget-101.com/codigo/algoritmo-de-dijkstra/
