@@ -9,3 +9,5 @@ los datos necesarios para aplicar el algoritmo de Dijkstra.
 Limitación Técnica:
 
 Los Vértices deben ser númericos y comenzar desde cero.
+
+#define MAXV 100 // Maxima cantidad de vertices.
