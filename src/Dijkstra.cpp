@@ -7,42 +7,32 @@
 #include <iostream>
 #include <queue>
 #include <vector>
-
-using namespace std;
-
 #define MAXV 100 // Maxima cantidad de vertices.
 #define oo 0x3f3f3f3f // Nuestro valor infinito.
+using namespace std;
+
 
 struct Edge
 {
-	int node;
-	int cost;
-	Edge(int _node, int _cost) :
-			node(_node), cost(_cost)
-	{
-	}
-	Edge() :
-			node(-1), cost(-1)
-	{
-	}
+	int node; // El nodo destino de la arista.
+	int cost; // El costo de la arista.
+	Edge(int _node, int _cost) : node(_node), cost(_cost) {} // Constructor parametrizado.
+	Edge() : node(-1), cost(-1) {} // Constructor por defecto.
 };
 
 struct Graph
 {
-	vector<Edge> G[MAXV];
-	int V;
-	int E;
+	vector<Edge> G[MAXV]; // Lista de adyacencias.
+	int V; // Cantidad de vertices.
+	int E; // Cantidad de aristas.
 };
 
 struct State
 {
-	int node;
-	int cost;
-	State(int _node, int _cost) :
-			node(_node), cost(_cost)
-	{
-	}
-	bool operator <(const State &b) const
+	int node; // El nodo actual.
+	int cost; // El costo del camino.
+	State(int _node, int _cost) : node(_node), cost(_cost) {} // Constructor parametrizado.
+	bool operator <(const State &b) const // Sobrecarga del operador de prioridad <.
 	{
 		return cost > b.cost;
 	}
@@ -50,32 +40,32 @@ struct State
 
 int algoritmo(const int begin, const int end, const Graph graph)
 {
-	priority_queue<State> pq;
-	vector<int> Dist(graph.V, oo);
-	vector<bool> mark(graph.V, false);
-	Dist[begin] = 0;
-	pq.push(State(begin, 0));
-	while (!pq.empty())
+	priority_queue<State> pq; // La cola de prioridad.
+	vector<int> Dist(graph.V, oo); // La distancia hacia todos los vertices. Inicialmente para cada vertice su valor es infinito.
+	vector<bool> mark(graph.V, false); // Este arreglo nos permitira determinar los nodos procesados.
+
+	Dist[begin] = 0; // Valor inicial del vertice de partida.
+	pq.push(State(begin, 0)); // Agregamos el primer elemento, que no es mas que el vertice de partida.
+	while(!pq.empty()) // Mientras existan vertices por procesar.
 	{
-		State st = pq.top();
-		pq.pop();
-		mark[st.node] = true;
+		State st = pq.top(); pq.pop(); // Se desencola el elemento minimo.
+		mark[st.node] = true; // Se marca el nodo como visitado.
 		if (st.node == end)
+			return st.cost; // Retornamos el valor del camino, hemos llegado al vertice destino.
+
+		int T = (int)graph.G[st.node].size();
+		for(int i = 0; i < T; ++i) // Se recorren las adyacencias de "a".
 		{
-			return st.cost;
-		}
-		int T = (int) graph.G[st.node].size();
-		for (int i = 0; i < T; ++i)
-		{
+			// Si no ha sido procesado el vertice "vi" y la distancia hacia "vi" es menor a la distancia
+			// en Dist entonces hemos encontrado un camino mas corto a "vi".
 			if (!mark[graph.G[st.node][i].node] && ((Dist[st.node] + graph.G[st.node][i].cost) < Dist[graph.G[st.node][i].node]))
 			{
 				Dist[graph.G[st.node][i].node] = st.cost + graph.G[st.node][i].cost;
-				pq.push(State(graph.G[st.node][i].node,st.cost + graph.G[st.node][i].cost));
-
+				pq.push(State(graph.G[st.node][i].node, st.cost + graph.G[st.node][i].cost));
 			}
 		}
 	}
-	return -1;
+	return -1; // Si no se puede llegar al destino, retornar -1.
 }
 
 struct Programa
@@ -122,11 +112,13 @@ struct Programa
 
 int main()
 {
+	bool out=false;
+	char salir;
+
 	Programa programa; //TAD
 	Graph graph; // Grafo.
 
-	bool out=false;
-	char salir;
+	cout << "Algoritmo de Dijkstra en C++" << endl;
 
 	while (!out)
 	{
@@ -134,6 +126,7 @@ int main()
 	programa.cargarGrafo(graph); //Se cargan las aristas del Grafo
 	programa.Dijkstra(graph); //Se aplica el algoritmo de Dijkstra
 
+	//Desea Salir?
 	cout << "Salir? (S/N)" << endl;
 	cin >> salir;
 		if (salir == 'S')
