@@ -1,5 +1,4 @@
 #Algoritmo de Dijkstra en C++
-========
 ## Sobre el Programa 
 El programa va solicitando en momento de ejecución
 los datos necesarios para aplicar el algoritmo de Dijkstra.
