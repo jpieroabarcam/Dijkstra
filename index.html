@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta name="description" content="Algoritmo de Dijkstra  : ">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Dijkstra by piensamates</title>
+    <title>Algoritmo de Dijkstra </title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Dijkstra</h1>
-        <h2></h2>
-        <a href="https://github.com/piensamates/Dijkstra" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="algoritmo-de-dijkstra-en-c" class="anchor" href="#algoritmo-de-dijkstra-en-c"><span class="octicon octicon-link"></span></a>Algoritmo de Dijkstra en C++</h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/piensamates/Dijkstra">View on GitHub</a>
+
+          <h1 id="project_title">Algoritmo de Dijkstra </h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/piensamates/Dijkstra/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/piensamates/Dijkstra/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="sobre-el-programa" class="anchor" href="#sobre-el-programa"><span class="octicon octicon-link"></span></a>Sobre el Programa</h2>
 
 <p>El programa va solicitando en momento de ejecución
 los datos necesarios para aplicar el algoritmo de Dijkstra.</p>
@@ -40,43 +43,43 @@ los datos necesarios para aplicar el algoritmo de Dijkstra.</p>
 
 <p>100 // Maxima cantidad de vertices.</p>
 
+<p>Codigo Fuente Original: <a href="http://www.widget-101.com/codigo/algoritmo-de-dijkstra/">http://www.widget-101.com/codigo/algoritmo-de-dijkstra/</a></p>
+
+<h2>
+<a name="algoritmo-de-dijkstra" class="anchor" href="#algoritmo-de-dijkstra"><span class="octicon octicon-link"></span></a>Algoritmo de Dijkstra</h2>
+
 <p>Como sucede con los algoritmos de Kruskal y Prim para encontrar el árbol de expansión mínima hay una simple pero ineficiente manera de encontrar el camino mas corto de A hacia Z. Que es, Usando el Algoritmo de Dijkstra el cual consiste en ir explorando todos los caminos más cortos que parten del vértice origen y que llevan a todos los demás vértices; cuando se obtiene el camino más corto desde el vértice origen, al resto de vértices que componen el grafo, el algoritmo se detiene.
 El problema es que incluso para los grafos pequeños usando Kruskal o Prim podría tomar mucho tiempo.
 Mientras que el algoritmo de Dijkstra podría hacer el trabajo en pocos segundos.</p>
 
-<center>Dijkstra en Funcionamiento
+<h2>
+<a name="dijkstra-en-funcionamiento" class="anchor" href="#dijkstra-en-funcionamiento"><span class="octicon octicon-link"></span></a>Dijkstra en Funcionamiento</h2>
 
 <p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Dijkstra_Animation.gif/270px-Dijkstra_Animation.gif" alt="Dijkstra"></p>
-</center>
-<p>Dijkstra comparado con Prim y Kruskal
-El proceso que subyace en el algoritmo de Dijkstra es similar al proceso utilizado en el algoritmo de Prim. El Propósito de Prim es encontrar un árbol de expansión mínimo que conecta todos los vértices del grafo; Dijkstra se ocupa sólo de dos vértices. Prim parte de un vertice y va añadiendo vertices cuyo coste sea minimo, así llegando a obtener todos los vértices. Kruskal el fin es el mismo que Prim, solo que parte con todos los vértices y ordena el coste de las aristas y va eligiendo las aristas de menor coste con dos premisas, no repetir vértices y sin hacer ningun bucle...</p>
 
-<p>Codigo Fuente Original: <a href="http://www.widget-101.com/codigo/algoritmo-de-dijkstra/">http://www.widget-101.com/codigo/algoritmo-de-dijkstra/</a></p>
+<h2>
+<a name="dijkstra-comparado-con-prim-y-kruskal" class="anchor" href="#dijkstra-comparado-con-prim-y-kruskal"><span class="octicon octicon-link"></span></a>Dijkstra comparado con Prim y Kruskal</h2>
 
-<p>Bibliografía: </p>
+<p>El proceso que subyace en el algoritmo de Dijkstra es similar al proceso utilizado en el algoritmo de Prim. El Propósito de Prim es encontrar un árbol de expansión mínimo que conecta todos los vértices del grafo; Dijkstra se ocupa sólo de dos vértices. Prim parte de un vertice y va añadiendo vertices cuyo coste sea minimo, así llegando a obtener todos los vértices. Kruskal el fin es el mismo que Prim, solo que parte con todos los vértices y ordena el coste de las aristas y va eligiendo las aristas de menor coste con dos premisas, no repetir vértices y sin hacer ningun bucle...</p>
+
+<h2>
+<a name="bibliograf%C3%ADa" class="anchor" href="#bibliograf%C3%ADa"><span class="octicon octicon-link"></span></a>Bibliografía:</h2>
 
 <p><a href="http://www.cengage.com.mx/ls/matematicas-discretas-con-aplicaciones-4a-ed/">Matemáticas Discretas con Aplicaciones, 4a. Ed. Susana S. Epp</a></p>
 
 <p><a href="http://es.wikipedia.org/wiki/Algoritmo_de_Dijkstra">Algoritmo de Dijkstra - Wikipedia</a></p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/piensamates/Dijkstra/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/piensamates/Dijkstra/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/piensamates/Dijkstra"></a> is maintained by <a href="https://github.com/piensamates">piensamates</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Algoritmo de Dijkstra  maintained by <a href="https://github.com/piensamates">piensamates</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
