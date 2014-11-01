@@ -18,7 +18,7 @@ Dijkstra en Funcionamiento
 ![Dijkstra](http://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Dijkstra_Animation.gif/270px-Dijkstra_Animation.gif)
 
 Dijkstra comparado con Prim y Kruskal
-El proceso que subyace en el algoritmo de Dijkstra es similar al proceso utilizado en el algoritmo de Prim. El Propósito de Prim es encontrar un árbol de expansión mínimo que conecta todos los vértices del grafo; Dijkstra se ocupa sólo de dos vértices. Prim parte de un vertice y va añadiendo vertices cuyo coste sea minimo, así llegando a obtener todos los vértices. Kruskal el fin es el mismo, solo que se diferencia que parte con todos los vértices y ordena el coste de las aristas y va eligiendo las de menor coste con dos premisas, no repetir nodos y sin hacer ningun bucle hasta el final...
+El proceso que subyace en el algoritmo de Dijkstra es similar al proceso utilizado en el algoritmo de Prim. El Propósito de Prim es encontrar un árbol de expansión mínimo que conecta todos los vértices del grafo; Dijkstra se ocupa sólo de dos vértices. Prim parte de un vertice y va añadiendo vertices cuyo coste sea minimo, así llegando a obtener todos los vértices. Kruskal el fin es el mismo que Prim, solo que parte con todos los vértices y ordena el coste de las aristas y va eligiendo las aristas de menor coste con dos premisas, no repetir vértices y sin hacer ningun bucle...
 
 Codigo Fuente Original: http://www.widget-101.com/codigo/algoritmo-de-dijkstra/
 
